@@ -5,14 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 捷克 (Czech) 01 - xiaohe
-  server: 153.76.185.155
-  port: 3090
+  server: 104.21.36.36
+  port: 443
   udp: true
   type: vless
-  uuid: 43b15d01-8cc5-40ea-b42a-cb1a727224dc
-  network: grpc
-  grpc-opts:
-    grpc-service-name: vless
+  uuid: 41750e18-7143-49a3-bdac-4edcb3c8b8f3
+  tls: true
+  servername: h3hadzojqmjxwseayj0dwe4o0.ade-1018.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/ml3Epzqnzr8r2cTPtolbD5lTi1GWsZOP?ed=2560
+    headers:
+      Host: h3hadzojqmjxwseayj0dwe4o0.ade-1018.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
