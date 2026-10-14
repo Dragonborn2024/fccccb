@@ -27,7 +27,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -61,59 +61,26 @@
       }
     },
     {
-      "type": "vless",
+      "type": "hysteria2",
       "tag": "🇨🇭 瑞士 (Switzerland) 04 - xiaohe",
-      "server": "138.124.96.88",
-      "server_port": 41826,
-      "uuid": "2eb3f6a0-df6e-49b6-994c-177acdd50a97",
+      "server": "208.69.78.217",
+      "server_port": 33092,
+      "password": "capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw",
       "tls": {
         "enabled": true,
-        "server_name": "sweden.homyak.app",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "server_name": "vpn.local",
+        "insecure": true
       },
-      "transport": {
-        "type": "httpupgrade",
-        "path": "/"
+      "obfs": {
+        "type": "salamander",
+        "password": "mbQXP2ASuHbF6ZPq"
       }
-    },
-    {
-      "type": "vless",
-      "tag": "🇨🇭 瑞士 (Switzerland) 05 - xiaohe",
-      "server": "157.228.156.211",
-      "server_port": 443,
-      "uuid": "7b9b233c-c646-4859-88b2-2a55695c6487",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "br.urobotix.tech",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "jQx41aPKBwFCRKregjdLMmwo4ShIYfjHWIMIl-0HJhc",
-          "short_id": "288d01b5"
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇨🇭 瑞士 (Switzerland) 06 - xiaohe",
-      "server": "132.243.175.144",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "e8KgS8fD0yDqYFpgN4G5piCOt9aFyqA3"
     },
     {
       "type": "hysteria2",
-      "tag": "🇨🇭 瑞士 (Switzerland) 07 - xiaohe",
+      "tag": "🇨🇭 瑞士 (Switzerland) 05 - xiaohe",
       "server": "208.69.78.217",
-      "server_port": 21046,
+      "server_port": 21054,
       "password": "capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw",
       "tls": {
         "enabled": true,
@@ -127,7 +94,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇨🇭 瑞士 (Switzerland) 08 - xiaohe",
+      "tag": "🇨🇭 瑞士 (Switzerland) 06 - xiaohe",
       "server": "208.69.78.217",
       "server_port": 2053,
       "uuid": "c0dd6d59-1573-43af-8b70-1470b2632a6d",
@@ -146,54 +113,6 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇨🇭 瑞士 (Switzerland) 09 - xiaohe",
-      "server": "208.69.78.217",
-      "server_port": 21086,
-      "password": "capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw",
-      "tls": {
-        "enabled": true,
-        "server_name": "vpn.local",
-        "insecure": true
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "mbQXP2ASuHbF6ZPq"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇨🇭 瑞士 (Switzerland) 10 - xiaohe",
-      "server": "208.69.78.217",
-      "server_port": 21080,
-      "password": "capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw",
-      "tls": {
-        "enabled": true,
-        "server_name": "vpn.local",
-        "insecure": true
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "mbQXP2ASuHbF6ZPq"
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇨🇭 瑞士 (Switzerland) 11 - xiaohe",
-      "server": "208.69.78.217",
-      "server_port": 33187,
-      "password": "capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw",
-      "tls": {
-        "enabled": true,
-        "server_name": "vpn.local",
-        "insecure": true
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "mbQXP2ASuHbF6ZPq"
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
@@ -203,12 +122,7 @@
         "🇨🇭 瑞士 (Switzerland) 03 - xiaohe",
         "🇨🇭 瑞士 (Switzerland) 04 - xiaohe",
         "🇨🇭 瑞士 (Switzerland) 05 - xiaohe",
-        "🇨🇭 瑞士 (Switzerland) 06 - xiaohe",
-        "🇨🇭 瑞士 (Switzerland) 07 - xiaohe",
-        "🇨🇭 瑞士 (Switzerland) 08 - xiaohe",
-        "🇨🇭 瑞士 (Switzerland) 09 - xiaohe",
-        "🇨🇭 瑞士 (Switzerland) 10 - xiaohe",
-        "🇨🇭 瑞士 (Switzerland) 11 - xiaohe"
+        "🇨🇭 瑞士 (Switzerland) 06 - xiaohe"
       ]
     },
     {
@@ -220,12 +134,7 @@
         "🇨🇭 瑞士 (Switzerland) 03 - xiaohe",
         "🇨🇭 瑞士 (Switzerland) 04 - xiaohe",
         "🇨🇭 瑞士 (Switzerland) 05 - xiaohe",
-        "🇨🇭 瑞士 (Switzerland) 06 - xiaohe",
-        "🇨🇭 瑞士 (Switzerland) 07 - xiaohe",
-        "🇨🇭 瑞士 (Switzerland) 08 - xiaohe",
-        "🇨🇭 瑞士 (Switzerland) 09 - xiaohe",
-        "🇨🇭 瑞士 (Switzerland) 10 - xiaohe",
-        "🇨🇭 瑞士 (Switzerland) 11 - xiaohe"
+        "🇨🇭 瑞士 (Switzerland) 06 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

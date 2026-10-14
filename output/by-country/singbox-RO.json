@@ -31,7 +31,7 @@
         "server_name": "www.datadoghq.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -73,7 +73,7 @@
         "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
@@ -83,16 +83,8 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇷🇴 罗马尼亚 (Romania) 05 - xiaohe",
-      "server": "bogging-eyeteeth-fly.freesocks.work",
-      "server_port": 443,
-      "method": "chacha20-ietf-poly1305",
-      "password": "QFWzCw2uX9B9i6qAYeFBIE"
-    },
-    {
       "type": "hysteria2",
-      "tag": "🇷🇴 罗马尼亚 (Romania) 06 - xiaohe",
+      "tag": "🇷🇴 罗马尼亚 (Romania) 05 - xiaohe",
       "server": "185.156.44.99",
       "server_port": 443,
       "password": "gf1:gfhysteria2024",
@@ -101,6 +93,14 @@
         "server_name": "google.com",
         "insecure": true
       }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇷🇴 罗马尼亚 (Romania) 06 - xiaohe",
+      "server": "bogging-eyeteeth-fly.freesocks.work",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "QFWzCw2uX9B9i6qAYeFBIE"
     },
     {
       "type": "selector",
