@@ -19,7 +19,7 @@ proxies:
   type: trojan
   password: 5t6i121em5lkmsmk
   sni: mx001.zestapp778.com
-  skip-cert-verify: false
+  skip-cert-verify: true
 - name: 🇲🇽 墨西哥 (Mexico) 03 - xiaohe
   server: 147.78.1.253
   port: 443
