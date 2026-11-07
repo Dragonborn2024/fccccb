@@ -53,7 +53,6 @@ except ImportError as e:
 # ══════════════════════════════════════════════════════════════════
 
 SOURCE_URLS = [
-    "https://wild-cloud-9893.heleimail.workers.dev",
     "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-TW.txt",
     "https://raw.githubusercontent.com/ShatakVPN/ConfigForge-V2Ray/main/configs/all.txt",
     "https://raw.githubusercontent.com/10ium/HiN-VPN/main/subscription/base64/mix",
@@ -61,12 +60,11 @@ SOURCE_URLS = [
     "https://raw.githubusercontent.com/10ium/telegram-configs-collector/main/security/tls",
     "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/v2ray-base64.txt",
     "https://raw.githubusercontent.com/freefq/free/master/v2",
-    "https://open.heleimail.workers.dev/",
+    "https://raw.githubusercontent.com/roosterkid/openproxylist/main/V2RAY_RAW.txt",
     "https://www.ermao.net/sub/v2ray/ermao.net",
     "https://raw.githubusercontent.com/ishalumi/proxy-node-collector/main/output/nodes_base64.txt",
     "https://gist.githubusercontent.com/shuaidaoya/9e5cf2749c0ce79932dd9229d9b4162b/raw/base64.txt",
-    "https://raw.githubusercontent.com/PuddinCat/BestClash/main/proxies.yaml",
-    "https://raw.githubusercontent.com/twj0/subseek/refs/heads/master/data/sub_github.txt",
+    "https://shadowmere.akiel.dev/api/b64sub/",
 ]
 
 OUTPUT_DIR = "output"
@@ -1629,7 +1627,19 @@ def classify_network_type(ip: str, country: str, asn, org: str, ip_api_rec: dict
 def outbound_to_clash(node: dict, name: str) -> dict:
     """sing-box outbound → Clash (Meta/mihomo) proxy dict"""
     t = node.get("type")
-    server, port = node["server"], node["server_port"]
+    server = node.get("server")
+    port = node.get("server_port")
+    
+    # 安全处理：防止 hy2 端口跳跃节点缺少 server_port 导致崩溃
+    if not server:
+        return None
+    if port is None:
+        if node.get("server_ports"):
+            # 取第一个端口区间的起始端口
+            port = int(str(node["server_ports"][0]).split(":")[0])
+        else:
+            return None
+            
     proxy = {"name": name, "server": server, "port": port, "udp": True}
 
     if t == "vless":
@@ -2584,5 +2594,7 @@ def main():
     print(f"国家 Top10: {top_c}")
 
 
+if __name__ == "__main__":
+    main()
 if __name__ == "__main__":
     main()
